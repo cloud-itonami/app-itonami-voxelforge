@@ -1,4 +1,4 @@
-# voxelforge.etzhayyim.com — 3D design pipeline (text/image/CAD → mesh+voxel)
+# voxelforge.itonami.app — 3D design pipeline (text/image/CAD → mesh+voxel)
 
 Authoritative: ADR-2605080700 + ADR-2605080600 (LangGraph Server) + ADR-2605010000 (RunPod 6000 Ada).
 
@@ -49,7 +49,7 @@ All artifacts live at `b2://etzhayyim-nats/voxelforge/v1/{designId}/...`.
 ## Forwarding model
 
 ```
-Client → CF Worker (voxelforge.etzhayyim.com)
+Client → CF Worker (voxelforge.itonami.app)
    ↓ auth middleware → PDS_SERVICE binding /_internal/resolve-auth
    ↓ resolved { did, orgDid, activeDid, productScope }
    ↓ POST https://dispatcher.etzhayyim.com/xrpc/com.etzhayyim.voxelforge.{method}
@@ -84,11 +84,11 @@ etzhayyim deploy --no-svelte
 
 ```bash
 # 1. Edge health (no auth)
-curl https://voxelforge.etzhayyim.com/health
-curl https://voxelforge.etzhayyim.com/_app/meta
+curl https://voxelforge.itonami.app/health
+curl https://voxelforge.itonami.app/_app/meta
 
 # 2. Submit a text-driven design (Bearer required)
-curl -X POST https://voxelforge.etzhayyim.com/xrpc/com.etzhayyim.voxelforge.generate \
+curl -X POST https://voxelforge.itonami.app/xrpc/com.etzhayyim.voxelforge.generate \
   -H "Authorization: Bearer sk_live_xxxxx" \
   -H "Content-Type: application/json" \
   -d '{
@@ -97,14 +97,14 @@ curl -X POST https://voxelforge.etzhayyim.com/xrpc/com.etzhayyim.voxelforge.gene
     "targetFormat": "both",
     "targetVoxelDim": 64
   }'
-# → { "runId": "...", "designId": "at://did:web:voxelforge.etzhayyim.com/...", "status": "running", "estimatedSeconds": 90 }
+# → { "runId": "...", "designId": "at://did:web:voxelforge.itonami.app/...", "status": "running", "estimatedSeconds": 90 }
 
 # 3. Poll
-curl "https://voxelforge.etzhayyim.com/xrpc/com.etzhayyim.voxelforge.getRun?runId=..." \
+curl "https://voxelforge.itonami.app/xrpc/com.etzhayyim.voxelforge.getRun?runId=..." \
   -H "Authorization: Bearer sk_live_xxxxx"
 
 # 4. CAD path (no GPU needed)
-curl -X POST https://voxelforge.etzhayyim.com/xrpc/com.etzhayyim.voxelforge.generate \
+curl -X POST https://voxelforge.itonami.app/xrpc/com.etzhayyim.voxelforge.generate \
   -H "Authorization: Bearer sk_live_xxxxx" \
   -H "Content-Type: application/json" \
   -d '{

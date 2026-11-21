@@ -16,7 +16,7 @@
     (is (= "etzhayyim-project-voxelforge" @(rf/subscribe [:name])))
     (is (= "cloudflare surface" @(rf/subscribe [:kind])))
     (is (= 1 @(rf/subscribe [:route-count])))
-    (is (= ["voxelforge.etzhayyim.com/*"] @(rf/subscribe [:routes])))
+    (is (= ["voxelforge.itonami.app/*"] @(rf/subscribe [:routes])))
     (is (= 6 (count @(rf/subscribe [:vars]))))
     (is (true? @(rf/subscribe [:xrpc?])))
     (is (= "cljs/src/voxelforge/app.cljs"

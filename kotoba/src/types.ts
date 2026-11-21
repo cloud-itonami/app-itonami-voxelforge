@@ -40,7 +40,7 @@ export const RUN_COLLECTION = "com.etzhayyim.apps.voxelforge.run";
 // ─── E2E inner-type (body shape inside the encrypted envelope) ───────
 export const DESIGN_INNER_TYPE = "com.etzhayyim.apps.voxelforge.design";
 
-export const VOXELFORGE_DID_PREFIX = "did:web:voxelforge.etzhayyim.com:" as const;
+export const VOXELFORGE_DID_PREFIX = "did:web:voxelforge.itonami.app:" as const;
 
 export type DesignKind = "text" | "image" | "cad";
 export type TargetFormat = "glb" | "vox" | "both";

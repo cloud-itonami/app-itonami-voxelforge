@@ -50,7 +50,7 @@
    :name "etzhayyim-project-voxelforge"
    :kind "cloudflare surface"
    :route-count 1
-   :routes ["voxelforge.etzhayyim.com/*"]
+   :routes ["voxelforge.itonami.app/*"]
    :vars ["AGENTGATEWAY_MCP_ROUTER_URL" "APP_FRAMEWORK" "AUTHN_URL" "PDS_URL"
           "VOXELFORGE_ACTOR_DID" "VOXELFORGE_VERSION"]
    :xrpc? true
