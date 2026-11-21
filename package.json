@@ -6,7 +6,7 @@
   "main": "src/app.ts",
   "scripts": {
     "deploy": "etzhayyim deploy --no-svelte",
-    "smoke": "curl -s https://voxelforge.etzhayyim.com/health"
+    "smoke": "curl -s https://voxelforge.itonami.app/health"
   },
   "dependencies": {
     "@etzhayyim/kotodama-host-sdk": "workspace:*",

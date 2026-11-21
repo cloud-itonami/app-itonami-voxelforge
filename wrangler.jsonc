@@ -15,13 +15,13 @@
   ],
   "routes": [
     {
-      "pattern": "voxelforge.etzhayyim.com/*",
-      "zone_name": "etzhayyim.com"
+      "pattern": "voxelforge.itonami.app/*",
+      "zone_name": "itonami.app"
     }
   ],
   "vars": {
     "VOXELFORGE_VERSION": "0.1.0",
-    "VOXELFORGE_ACTOR_DID": "did:web:voxelforge.etzhayyim.com",
+    "VOXELFORGE_ACTOR_DID": "did:web:voxelforge.itonami.app",
     "PDS_URL": "https://atproto.etzhayyim.com",
     "AUTHN_URL": "https://authn.etzhayyim.com",
     "APP_FRAMEWORK": "cljs-reagent-re-frame-jp-go-dds",

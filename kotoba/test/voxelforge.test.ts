@@ -13,7 +13,7 @@ import {
   coverage,
 } from "../src/index.js";
 
-const OWNER = "did:web:voxelforge.etzhayyim.com";
+const OWNER = "did:web:voxelforge.itonami.app";
 
 function seedRun(e: any, runId: string, designId: string, status = "running") {
   return recordRun(e, { runId, designId, status: status as any, startedAt: "2026-06-03T00:00:00.000Z" });

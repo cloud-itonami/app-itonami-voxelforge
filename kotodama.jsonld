@@ -5,13 +5,13 @@
   "performerType": "service",
   "displayName": "Voxelforge",
   "description": "3D design pipeline. text / image / CAD code → mesh (.glb) + voxel (.vox MagicaVoxel) via LangGraph Server + Granian on RunPod 6000 Ada unified pod (TRELLIS + ComfyUI 3D-Pack + CadQuery). Output consumed by isekai (kami-voxel) and external Minecraft tools.",
-  "did": "did:web:voxelforge.etzhayyim.com",
+  "did": "did:web:voxelforge.itonami.app",
   "tier": "T2",
   "uiType": "appview",
-  "embedUrl": "https://voxelforge.etzhayyim.com/embed",
+  "embedUrl": "https://voxelforge.itonami.app/embed",
   "routes": [
     {
-      "host": "voxelforge.etzhayyim.com"
+      "host": "voxelforge.itonami.app"
     }
   ],
   "layer": "edge-dispatcher",
